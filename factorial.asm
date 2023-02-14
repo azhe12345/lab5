@@ -44,8 +44,9 @@ loop:
 	mult $t1, $t2
 	mflo $t1
 
-	addi $t2, $t2, 1
+	
 	beq $t3, $zero, print
+	addi $t2, $t2, 1
 
 	
 	
