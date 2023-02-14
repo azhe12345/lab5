@@ -33,16 +33,23 @@ main:
 	syscall
 
 	move $t0,$v0;
+	beq $t0, $zero, print
 	li $t1, 1
 	li $t2, 2
+	
 loop: 
+	slt $t3,$t2,$t0
+	
 	
 	mult $t1, $t2
 	mflo $t1
-	
-	slt $t3,$t2,$t0
-	beq $t3, $zero, print
+
 	addi $t2, $t2, 1
+	beq $t3, $zero, print
+
+	
+	
+	
 	j loop 
 
 
