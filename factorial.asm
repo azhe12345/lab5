@@ -33,11 +33,15 @@ main:
 	syscall
 
 	move $t0,$v0;
-	beq $t0, $zero, print
+	
 	li $t1, 1
+	move $t2, $t0
+	slt $t4, $t0, 2
+	bne $t4, $zero, print
 	li $t2, 2
 	
 loop: 
+
 	slt $t3,$t2,$t0
 	
 	
